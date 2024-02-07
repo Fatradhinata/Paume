@@ -1,0 +1,59 @@
+:root {
+    --x-pos: -40rem;
+    --y-pos: -40rem;
+}
+
+$blanc: #FEFEFE;
+$noir: #0A0A0A;
+$blanc-brilliant: #FEFEFE;
+
+$default-font: 'space grotesk';
+
+$big-title: 18rem;
+$artist-name: 1.8rem;
+$song-name: 1.2rem;
+$text-categorie-off: 1.6rem;
+$text-categorie-on: 2.6rem;
+$main-artist-name: 5rem;
+$song-name-selected: 2.6rem;
+$artist-name-selected: 2rem;
+$menu: 1.6rem;
+
+$phone: 576px;
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    // overflow-x: hidden;
+}
+
+body {
+    background-color: $noir;
+    padding: 5rem;
+    min-height: 200rem;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: $phone) {
+        padding: 2.5rem;
+        overflow-x: hidden;
+    }
+}
+
+.blurry{
+    content: ""; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;  
+    backdrop-filter: blur(20px);
+    z-index: 1000; 
+    pointer-events: none;
+    transition: all .2s;
+}
