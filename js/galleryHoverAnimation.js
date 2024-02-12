@@ -1,4 +1,3 @@
-import { gsap } from 'gsap'
 
 var artistName = document.querySelectorAll('.artist-gallery');
 
