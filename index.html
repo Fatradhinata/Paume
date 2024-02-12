@@ -176,11 +176,12 @@
             $(".cat__image").hover(function () {
                 $(this).css("pointer-events", "all")
                 $(this).css("z-index", "1002");
-                $(this).css("transform", "scale(1.2)");
+                $(this).children(".cat__video").css("transform", "scale(1.2)");
                 $(this).children(".cat__video").css("display", "flex");
                 $(this).children(".cat-image").css("display", "none");                
+                $(this).children(".cat-box").css("display", "none");                
                 $("#blurry").addClass("blurry")
-
+                
                 if (window.matchMedia('(max-width: 567px)').matches) {
                     $(this).css("transform", "scale(1.05)");
                 }
@@ -191,6 +192,7 @@
                 $(this).css("pointer-events", "unset")
                 $(this).children(".cat__video").css("display", "none");
                 $(this).children(".cat-image").css("display", "flex");
+                $(this).children(".cat-box").css("display", "block");                
                 $("#blurry").removeClass("blurry")
                 })
 

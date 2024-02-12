@@ -275,7 +275,8 @@ body {
     object-fit: cover;
     border-radius: 10px;
     display: none;
-    height: inherit; }
+    height: inherit;
+    position: absolute; }
   .gallery__body .categories__image--1 {
     grid-area: 1/1/2/2; }
   .gallery__body .categories__image--2 {
