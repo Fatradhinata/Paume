@@ -1,3 +1,5 @@
+import { gsap } from 'gsap'
+
     document.addEventListener('mousemove', (e) => {
         gsap.to(".cursor", {
             opacity: 1,            
