@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <title>Paume</title>
 </head>
@@ -186,6 +186,10 @@
                 $(this).children(".cat__video").css("display", "flex");
                 $(this).children(".cat-image").css("display", "none");                
                 $("#blurry").addClass("blurry")
+
+                if (window.matchMedia('(max-width: 567px)').matches) {
+                    $(this).css("transform", "scale(1.05)");
+                }
             },
             function () {
                 $(this).css("transform", "scale(1)");
