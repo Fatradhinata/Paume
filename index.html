@@ -159,7 +159,7 @@
                     <img src="assets/gallery-hover/img8.png" alt="img8" class="cat-image">
                     <div class="cat-box">
                         <h6 class="cat__image--name">Unknown</h6>
-                        <p class="cat__image--description">Unknown</p>
+                        <p class="cat__image--description">None</p>
                     </div>
                     <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
                 </div>
@@ -167,6 +167,44 @@
         </div>
     </main>
     <script>
+
+        document.addEventListener('mousemove', (e) => {
+                gsap.to(".cursor", {
+                    opacity: 1,            
+                    duration: 0.4,
+                    x: e.clientX,
+                    y: e.clientY,
+                    ease: "power2",
+                });
+
+                gsap.set(".cursor", {
+                    backdropFilter: "invert(100%)"
+                })
+            })
+
+            document.addEventListener('mouseleave', (e) => {
+                gsap.to(".cursor", {
+                    opacity: 0
+                })
+            })
+
+            import { gsap } from 'gsap'
+
+        var artistName = document.querySelectorAll('.artist-gallery');
+
+        artistName.forEach(element => {
+            element.addEventListener("mousemove", (e) => {
+            element.style.zIndex = 5;
+            let imageHover = element.querySelector(".artist-image");
+            let pos = imageHover.getBoundingClientRect();
+            console.log(pos.left, e.clientX / 10);
+            gsap.to(imageHover, {
+                duration: .5,
+                x: e.clientX / 10,
+                y: e.clientY / 10
+            })
+            })
+        });
 
         document.querySelectorAll(".cat-image").forEach((element, index) => {
             imageCatHeight = element.offsetHeight;
