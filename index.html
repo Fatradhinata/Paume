@@ -241,7 +241,6 @@
                 });
             });
 
-
             // GALLERY HOVER BOTTOM BLURRY
             $(".cat__image").hover(function () {
                 $(this).css("pointer-events", "all")
@@ -272,7 +271,7 @@
                 $(this).children(".cat__video").css("display", "none");          
 
                 $("#blurry").removeClass("blurry")
-                })
+            })
 
             // NAV CLICKED ICON MENU 
             $(".menu__icon").click(
@@ -288,6 +287,7 @@
                     } else {
                         $(this).css("background-color", "#FEFEFE");
                         $(this).css("border-radius", "10%");
+
                         $(this).addClass("active");
 
                         $(".menu__nav").css("opacity", "1");
