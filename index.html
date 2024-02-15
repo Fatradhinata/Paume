@@ -11,15 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <title>Paume</title>
 </head>
 
 <body>
-    <div class="cursor"></div>
-    <div id="blurry"></div>
+    <div class="cursor"></div> <!-- FOR CURSOR ANIMATION -->
+    <div id="blurry"></div> <!-- MAKE ALL BACKGROUND BECOME BLUR WHEN HOVER CATEGORIES IMAGE -->
     <nav class="nav">
         <img src="assets/svg/LOGO_PAUME.svg" alt="">
         <ul class="menu__nav">
@@ -27,7 +27,7 @@
             <li>talent</li>
             <li>about</li>
         </ul>
-        <div class="menu__icon">
+        <div class="menu__icon"> <!-- FOR NAV MENU LOGO -->
             <div class="menu__icon--round"></div>
             <div class="menu__icon--round"></div>
             <div class="menu__icon--round"></div>
@@ -39,69 +39,111 @@
             <div class="menu__icon--round"></div>
         </div>
     </nav>
-    <main class="main__gallery">
-        <div class="container__header">
-            <h1 class="heading--primary">LATEST JOBS</h1>
+    <main class="main__gallery"> <!-- MAIN CONTAINER -->
+        <section class="container__header">
+            <h1 class="heading heading--primary">LATEST JOBS</h1>
             <div class="artist-name">
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Travis Scott">Travis Scott</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Travis Scott">Travis Scott</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Kanye West">Kanye West</h2>
-                    <img src="assets/gallery-hover/img2.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Kanye West">Kanye West</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img2.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img2.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="A$ap Rocky">A$ap Rocky</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="A$ap Rocky">A$ap Rocky</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Ferrari">Ferrari</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Ferrari">Ferrari</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Dj Snake">Dj Snake</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Dj Snake">Dj Snake</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Libre">Libre</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Libre">Libre</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Louis Vuitton">Louis Vuitton</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Louis Vuitton">Louis Vuitton</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Pepite">Pepite</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Pepite">Pepite</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Pachanga Boys">Pachanga Boys</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Pachanga Boys">Pachanga Boys</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Christian Base">Christian Base</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Christian Base">Christian Base</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="SCH">SCH</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="SCH">SCH</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Kid Cudi">Kid Cudi</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Kid Cudi">Kid Cudi</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Juliette Armanet">Juliette Armanet</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Juliette Armanet">Juliette Armanet</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
                 <div class="artist-gallery">
-                    <h2 class="heading--secondary" data-artist-name="Damso">Damso</h2>
-                    <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                    <h2 class="heading heading--secondary" data-artist-name="Damso">Damso</h2>
+                    <div class="image-container">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image">
+                        <img src="assets/gallery-hover/img1.png" alt="Image Hover" class="artist-image-blur">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="gallery__body">
+        </section>
+        <section class="gallery__body"> <!-- CATEGORIE GALLERY -->
             <div class="top-icon">
                 <img src="assets/svg/view-bottom.svg" alt="icon-btm">
                 <img src="assets/svg/view-side.svg" alt="icon-side">
@@ -118,68 +160,101 @@
                 <div class="cat__image categories__image--1">
                     <img src="assets/gallery-hover/img3.png" alt="img3" class="cat-image">
                     <div class="cat-box">
-                        <h6 class="cat__image--name">Ninho</h6>
-                        <p class="cat__image--description">25G</p>
-                    </div>                    
-                    <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
+                        <h6 class="cat__image-name">Ninho</h6>
+                        <p class="cat__image-description">25G</p>
+                    </div>
+                    <video src="assets/gallery-hover/sw-video.webm" loop autoplay muted class="cat__video"></video>
                 </div>
                 <div class="cat__image categories__image--2">
                     <img src="assets/gallery-hover/img4.png" alt="img4" class="cat-image">
                     <div class="cat-box">
-                        <h6 class="cat__image--name">Slowthai</h6>
-                        <p class="cat__image--description">Yum</p>
+                        <h6 class="cat__image-name">Slowthai</h6>
+                        <p class="cat__image-description">Yum</p>
                     </div>
-                    <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
+                    <video src="assets/gallery-hover/sw-video.webm" loop autoplay muted class="cat__video"></video>
                 </div>
                 <div class="cat__image categories__image--3">
                     <img src="assets/gallery-hover/img5.png" alt="img5" class="cat-image">
                     <div class="cat-box">
-                        <h6 class="cat__image--name">Acid Arab</h6>
-                        <p class="cat__image--description">Leila</p>
+                        <h6 class="cat__image-name">Acid Arab</h6>
+                        <p class="cat__image-description">Leila</p>
                     </div>
-                    <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
+                    <video src="assets/gallery-hover/sw-video.webm" loop autoplay muted class="cat__video"></video>
                 </div>
                 <div class="cat__image categories__image--4">
                     <img src="assets/gallery-hover/img6.png" alt="img6" class="cat-image">
                     <div class="cat-box">
-                        <h6 class="cat__image--name">Zara Larsson</h6>
-                        <p class="cat__image--description">Can't tame her</p>
+                        <h6 class="cat__image-name">Zara Larsson</h6>
+                        <p class="cat__image-description">Can't tame her</p>
                     </div>
-                    <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
+                    <video src="assets/gallery-hover/sw-video.webm" loop autoplay muted class="cat__video"></video>
                 </div>
                 <div class="cat__image categories__image--5">
                     <img src="assets/gallery-hover/img7.png" alt="img7" class="cat-image">
                     <div class="cat-box">
-                        <h6 class="cat__image--name">Kendrick Lamar</h6>
-                        <p class="cat__image--description">Elements</p>
+                        <h6 class="cat__image-name">Kendrick Lamar</h6>
+                        <p class="cat__image-description">Elements</p>
                     </div>
-                    <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
+                    <video src="assets/gallery-hover/sw-video.webm" loop autoplay muted class="cat__video"></video>
                 </div>
                 <div class="cat__image categories__image--6">
                     <img src="assets/gallery-hover/img8.png" alt="img8" class="cat-image">
                     <div class="cat-box">
-                        <h6 class="cat__image--name">Unknown</h6>
-                        <p class="cat__image--description">None</p>
+                        <h6 class="cat__image-name">Unknown</h6>
+                        <p class="cat__image-description">None</p>
                     </div>
-                    <video src="assets/gallery-hover/sw-video.mp4" loop autoplay muted class="cat__video"></video>
+                    <video src="assets/gallery-hover/sw-video.webm" loop autoplay muted class="cat__video"></video>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <script src="/js/cursorAnimation.js" type="module"></script>
     <script src="/js/galleryHoverAnimation.js" type="module"></script>
-    <script>  
+    <script>
 
         $(document).ready(function () {
+
+            // CATEGORIE NAV (BOTTOM) ACTIVE
+            $(".nav__menu-text").click(function () {
+                $(".nav__menu-text").each(function () {
+                    if ($(this).hasClass("nav__active--temp")) {
+                        $(this).removeClass("nav__active--temp");
+                    } 
+                })
+                $(this).addClass("nav__active");
+            })
+
+            $(".nav__menu-text").hover(function () {
+                if (!$(this).hasClass("nav__active")) {
+                    $(".nav__menu-text").each(function () {
+                        if ($(this).hasClass("nav__active")) {
+                            $(this).removeClass("nav__active");
+                            $(this).addClass("nav__active--temp");
+                        }
+                    });
+                }
+            }, function () {
+                $(".nav__menu-text").each(function () {
+                    if ($(this).hasClass("nav__active--temp")) {
+                        $(this).addClass("nav__active");
+                    }
+                });
+            });
+
 
             // GALLERY HOVER BOTTOM BLURRY
             $(".cat__image").hover(function () {
                 $(this).css("pointer-events", "all")
                 $(this).css("z-index", "1002");
-                $(this).children(".cat__video").css("transform", "scale(1.2)");
-                $(this).children(".cat__video").css("display", "flex");
-                $(this).children(".cat-image").css("display", "none");                
-                $(this).children(".cat-box").css("display", "none");                
+
+                $(this).children(".cat-image").css("filter", "blur(50px)");
+                $(this).children(".cat-image").css("mask-image", "unset");
+
+                $(this).children(".cat__video").css("transform", "scale(1.03)");
+                $(this).children(".cat__video").css("display", "block");  
+
+                $(this).children(".cat-box").css("z-index", "1001");  
+
                 $("#blurry").addClass("blurry")
                 
                 if (window.matchMedia('(max-width: 567px)').matches) {
@@ -187,26 +262,40 @@
                 }
             },
             function () {
-                $(this).css("transform", "scale(1)");
                 $(this).css("z-index", "1");
                 $(this).css("pointer-events", "unset")
-                $(this).children(".cat__video").css("display", "none");
-                $(this).children(".cat-image").css("display", "flex");
-                $(this).children(".cat-box").css("display", "block");                
+
+                $(this).children(".cat-image").css("filter", "blur(0)");
+                $(this).children(".cat-image").css("mask-image", "linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .3) 100%)");
+
+                $(this).children(".cat__video").css("transform", "scale(1)");
+                $(this).children(".cat__video").css("display", "none");          
+
                 $("#blurry").removeClass("blurry")
                 })
 
             // NAV CLICKED ICON MENU 
-            $(".menu__icon").click(function () {
-                console.log("asd");
-                if ($(this).hasClass("active")) {
-                    $(this).removeClass("active");
-                    $('.menu__nav').css("display", "none");
-                } else {
-                    $(this).addClass("active");
-                    $('.menu__nav').css("display", "flex");
+            $(".menu__icon").click(
+                function () {
+                    if ($(this).hasClass("active")) {
+                        $(this).css("background-color", "transparent");
+                        $(this).css("border-radius", "unset");
+                        $(this).removeClass("active");
+
+                        $(".menu__nav").css("opacity", "0");
+
+                        $(".menu__icon--round").css("background-color", "#FEFEFE");
+                    } else {
+                        $(this).css("background-color", "#FEFEFE");
+                        $(this).css("border-radius", "10%");
+                        $(this).addClass("active");
+
+                        $(".menu__nav").css("opacity", "1");
+
+                        $(".menu__icon--round").css("background-color", "black");
+                    }
                 }
-            });
+            );
         })
     </script>
 </body>

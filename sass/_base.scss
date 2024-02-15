@@ -19,6 +19,8 @@ $song-name-selected: 2.6rem;
 $artist-name-selected: 2rem;
 $menu: 1.6rem;
 
+$desktop-xl: 1250px;
+$tablet: 880px;
 $phone: 576px;
 
 
@@ -38,11 +40,16 @@ body {
     padding: 5rem;
     min-height: 200rem;
     overflow-x: hidden;
+    
+    @media only screen and (max-width: $tablet) {
+        padding: 2.5rem;
+    }
 
     @media only screen and (max-width: $phone) {
         padding: 2.5rem;
         overflow-x: hidden;
     }
+
 }
 
 .blurry{

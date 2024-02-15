@@ -14,6 +14,9 @@ body {
   padding: 5rem;
   min-height: 200rem;
   overflow-x: hidden; }
+  @media only screen and (max-width: 880px) {
+    body {
+      padding: 2.5rem; } }
   @media only screen and (max-width: 576px) {
     body {
       padding: 2.5rem;
@@ -52,7 +55,8 @@ body {
   height: 25px;
   align-items: center;
   padding: 3px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .5s; }
   .nav .menu__icon--round {
     border-radius: 50%;
     background-color: white;
@@ -62,14 +66,9 @@ body {
     align-items: center;
     margin: 0 auto; }
 
-.nav .active {
-  background-color: #FEFEFE;
-  border-radius: 10%; }
-  .nav .active > * {
-    background-color: black; }
-
 .nav .menu__nav {
-  display: none;
+  opacity: 0;
+  display: flex;
   text-decoration: none;
   justify-content: space-between;
   color: #FEFEFE;
@@ -79,7 +78,8 @@ body {
   margin-right: 3rem;
   align-items: center;
   gap: 3rem;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  transition: all .5s; }
   .nav .menu__nav li {
     opacity: .5;
     cursor: pointer; }
@@ -106,9 +106,15 @@ body {
   text-align: right;
   z-index: -3;
   white-space: nowrap; }
+  @media only screen and (max-width: 1250px) {
+    .container__header .heading--primary {
+      font-size: 12rem; } }
+  @media only screen and (max-width: 880px) {
+    .container__header .heading--primary {
+      font-size: 13vw; } }
   @media only screen and (max-width: 576px) {
     .container__header .heading--primary {
-      font-size: 9rem; } }
+      font-size: 13vw; } }
 
 .container__header .artist-name {
   display: flex;
@@ -117,12 +123,20 @@ body {
   width: 100%;
   justify-content: flex-start;
   margin-top: 30rem;
-  margin-left: 9rem; }
+  position: relative; }
   @media only screen and (max-width: 576px) {
     .container__header .artist-name {
       margin-top: 15rem;
       margin-left: 0;
-      flex-direction: column; } }
+      flex-direction: column; }
+      .container__header .artist-name:after {
+        content: "";
+        width: inherit;
+        height: 100%;
+        background-image: linear-gradient(to bottom, transparent 50%, black 100%);
+        position: absolute;
+        pointer-events: none;
+        z-index: 100; } }
   .container__header .artist-name .artist-gallery {
     position: relative; }
     .container__header .artist-name .artist-gallery .heading--secondary {
@@ -135,7 +149,8 @@ body {
       transition: opacity 0.5s, color 0.5s;
       opacity: .2;
       box-sizing: border-box;
-      z-index: 5; }
+      z-index: 5;
+      white-space: nowrap; }
       .container__header .artist-name .artist-gallery .heading--secondary:after {
         content: attr(data-artist-name);
         position: absolute;
@@ -153,29 +168,53 @@ body {
         color: white;
         font-weight: 600;
         opacity: 1; }
-      .container__header .artist-name .artist-gallery .heading--secondary:hover ~ .artist-image {
+      .container__header .artist-name .artist-gallery .heading--secondary:hover ~ .image-container {
         transition: opacity 0.5s, color 0.3s;
         opacity: 1;
         visibility: visible;
         display: block; }
-    .container__header .artist-name .artist-gallery img {
-      mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 90%);
-      position: absolute;
-      top: -34rem;
-      left: -10rem;
-      background-size: cover;
-      width: 80rem;
-      height: auto;
+      @media only screen and (max-width: 1250px) {
+        .container__header .artist-name .artist-gallery .heading--secondary {
+          font-size: 5rem;
+          margin-right: 5vw; } }
+      @media only screen and (max-width: 880px) {
+        .container__header .artist-name .artist-gallery .heading--secondary {
+          font-size: 4rem;
+          margin-right: 4rem; } }
+      @media only screen and (max-width: 576px) {
+        .container__header .artist-name .artist-gallery .heading--secondary {
+          font-size: 8.5vw;
+          line-height: 12vw; } }
+    .container__header .artist-name .artist-gallery .image-container {
       opacity: 0;
       display: none;
       z-index: -1;
       transition: all .4s;
-      border-radius: 0; }
+      border-radius: 0;
+      position: absolute;
+      top: -34rem;
+      left: -10rem; }
       @media only screen and (max-width: 576px) {
-        .container__header .artist-name .artist-gallery img {
+        .container__header .artist-name .artist-gallery .image-container {
           top: -24rem;
           left: 1rem;
           width: 50rem; } }
+    .container__header .artist-name .artist-gallery .artist-image {
+      background-size: cover;
+      width: 80rem;
+      height: auto;
+      position: relative;
+      mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 90%); }
+    .container__header .artist-name .artist-gallery .artist-image-blur {
+      background-size: cover;
+      width: 80rem;
+      height: auto;
+      filter: blur(125px);
+      position: absolute;
+      left: 0;
+      top: -20%;
+      transform: scale(0.65);
+      z-index: -2; }
 
 .gallery__body .top-icon {
   display: flex;
@@ -197,16 +236,30 @@ body {
 .gallery__body .nav__menu {
   display: flex;
   justify-content: space-between;
-  margin-top: 8rem; }
-  @media only screen and (max-width: 576px) {
+  margin-top: 8rem;
+  cursor: pointer; }
+  @media only screen and (max-width: 880px) {
     .gallery__body .nav__menu {
       position: relative;
       gap: 20px;
-      margin-top: 12rem;
+      margin-top: 8rem;
       overflow-x: scroll;
+      font-size: 2rem;
       -webkit-overflow-scrolling: touch; }
       .gallery__body .nav__menu::-webkit-scrollbar {
         display: none; } }
+  .gallery__body .nav__menu .nav__active {
+    font-size: 2.6rem;
+    opacity: 1;
+    font-weight: 600; }
+    .gallery__body .nav__menu .nav__active:after {
+      content: "";
+      width: 100%;
+      height: 1.5px;
+      display: block;
+      background-image: linear-gradient(to right, #fefefe 0%, rgba(0, 0, 0, 0) 50%);
+      opacity: 1;
+      transition: all .5s .1s; }
   .gallery__body .nav__menu-text {
     color: #FEFEFE;
     font-family: "space grotesk";
@@ -214,9 +267,12 @@ body {
     opacity: .2;
     text-transform: uppercase;
     transition: all .2s; }
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 880px) {
       .gallery__body .nav__menu-text {
         white-space: nowrap;
+        font-size: 4vw; } }
+    @media only screen and (max-width: 576px) {
+      .gallery__body .nav__menu-text {
         font-size: 2.5rem; }
         .gallery__body .nav__menu-text:hover {
           font-size: 3rem !important; } }
@@ -250,6 +306,7 @@ body {
       flex-direction: column; } }
   .gallery__body .categories__image .cat__image {
     width: 100%;
+    max-height: fit-content;
     height: fit-content;
     position: relative;
     transition: all .05s; }
@@ -267,16 +324,29 @@ body {
       font-family: "space grotesk";
       bottom: 5%;
       left: 5%; }
-      .gallery__body .categories__image .cat__image .cat-box .cat__image--name {
+      .gallery__body .categories__image .cat__image .cat-box .cat__image-name {
         font-size: 2rem;
         text-transform: uppercase; }
+        @media only screen and (max-width: 1250px) {
+          .gallery__body .categories__image .cat__image .cat-box .cat__image-name {
+            font-size: 1.8vw; } }
+        @media only screen and (max-width: 576px) {
+          .gallery__body .categories__image .cat__image .cat-box .cat__image-name {
+            font-size: 2.5vw; } }
+      @media only screen and (max-width: 1250px) {
+        .gallery__body .categories__image .cat__image .cat-box .cat__image-description {
+          font-size: 1.2vw; } }
+      @media only screen and (max-width: 576px) {
+        .gallery__body .categories__image .cat__image .cat-box .cat__image-description {
+          font-size: 2vw; } }
   .gallery__body .categories__image .cat__video {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
     display: none;
-    height: inherit;
-    position: absolute; }
+    max-height: 100%;
+    position: absolute;
+    top: 0; }
   .gallery__body .categories__image--1 {
     grid-area: 1/1/2/2; }
   .gallery__body .categories__image--2 {
@@ -297,17 +367,9 @@ body {
 .container__header {
   margin-top: 5rem; }
 
-.main__gallery {
-  padding: 0 2.5rem; }
-  @media only screen and (max-width: 576px) {
-    .main__gallery {
-      padding: 0; } }
-
 .gallery__body {
   margin-top: 30rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto; }
+  width: 100%; }
   @media only screen and (max-width: 576px) {
     .gallery__body {
       width: 100%;
