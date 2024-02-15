@@ -141,7 +141,7 @@ body {
         background-image: linear-gradient(to bottom, transparent 50%, #0A0A0A 100%);
         position: absolute;
         pointer-events: none;
-        z-index: 100; } }
+        z-index: 0; } }
   .container__header .artist-name .artist-gallery {
     position: relative; }
     .container__header .artist-name .artist-gallery .heading--secondary {
