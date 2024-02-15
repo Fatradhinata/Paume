@@ -52,10 +52,17 @@
         gap: 3rem;
         font-size: $menu;       
         transition: all .5s; 
+
+        @media only screen and (max-width: $phone) {
+            font-size: 3vw;
+            gap: 2vw;
+            margin-right: 2vw;
+        }
         
         li {
             opacity: .5;
             cursor: pointer;
+            
             
             &:after {
                 content: "";
